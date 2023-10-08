@@ -1,0 +1,26 @@
+public class Diagonal{
+    static void printPath(int r, int c, String p){
+        if(r==1 && c==1){
+            System.out.println(p);
+            return;
+        }
+        if(r>1&&c>1){
+                printPath(r-1, c-1, p+'D');
+        }
+        if(r>1){
+            printPath(r-1, c, p+'H');
+        }
+        if(c>1){
+            printPath(r, c-1, p+'V');
+        
+
+    }
+    return;
+}
+
+
+    public static void main(String[] args) {
+
+        printPath(3, 3, "");
+    }
+}
